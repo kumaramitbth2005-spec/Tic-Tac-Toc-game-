@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1 class="text">Tic Tac Toe</h1>
+        <p id="status">Press Play to start the game!</p>
+
+        <div class="board" id="board">
+            <div class="col" id="0" onclick="handleclick(this)"></div>
+            <div class="col" id="1" onclick="handleclick(this)"></div>
+            <div class="col" id="2" onclick="handleclick(this)"></div>
+            <div class="col" id="3" onclick="handleclick(this)"></div>
+            <div class="col" id="4" onclick="handleclick(this)"></div>
+            <div class="col" id="5" onclick="handleclick(this)"></div>
+            <div class="col" id="6" onclick="handleclick(this)"></div>
+            <div class="col" id="7" onclick="handleclick(this)"></div>
+            <div class="col" id="8" onclick="handleclick(this)"></div>
+        </div>
+
+        <div class="buttons">
+            <button id="playBtn" onclick="playGame()">▶ Play</button>
+            <button onclick="restartGame()">↻ Restart</button>
+            <button onclick="goBack()">← Back</button>
+            <button onclick="exitGame()">✕ Exit</button>
+        </div>
+
+        <p class="hint">Player X goes first, then Player O.</p>
+    </main>
+
+    <div id="result" role="dialog" aria-live="polite">
+        <h2 id="resultText"></h2>
+        <button onclick="restartGame()">Play Again</button>
+    </div>
+</body>
+</html>
